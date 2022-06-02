@@ -4,8 +4,11 @@ import java.time.LocalDateTime;
 
 public class MealTo {
     private final LocalDateTime dateTime;
+
     private final String description;
+
     private final int calories;
+
     private final boolean excess;
 
     public MealTo(LocalDateTime dateTime, String description, int calories, boolean excess) {
@@ -14,6 +17,7 @@ public class MealTo {
         this.calories = calories;
         this.excess = excess;
     }
+
     @Override
     public String toString() {
         return "MealTo{" +
