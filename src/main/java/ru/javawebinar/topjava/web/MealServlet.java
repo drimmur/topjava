@@ -6,11 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public class UserServlet extends HttpServlet {
+public class MealServlet extends HttpServlet {
     private static final Logger log = getLogger(UserServlet.class);
 
     @Override
@@ -18,6 +19,6 @@ public class UserServlet extends HttpServlet {
         log.debug("redirect to users");
 
         //        request.getRequestDispatcher("/users.jsp").forward(request, response);
-        response.sendRedirect("users.jsp");
+        response.sendRedirect("meals.jsp");
     }
 }
