@@ -22,12 +22,11 @@
     </tr>
     <c:forEach var="meal" items="${meals}">
         <tr class="${meal.excess ? 'excess': 'normal'}">
-        <tr>
             <td><p>${f:formatLocalDateTime(meal.dateTime, 'yyyy-MM-dd HH:mm')}</p></td>
             <td><p>${meal.description}</p></td>
             <td><p>${meal.calories}</p></td>
         </tr>
-        </tr>
+
     </c:forEach>
 </table>
 </body>
