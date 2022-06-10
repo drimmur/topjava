@@ -5,20 +5,30 @@
 <html lang="ru">
 <head>
     <title>Meals</title>
+    <style>
+        .normal {color: green;}
+        .excess {color: red;}
+    </style>
 </head>
 <body>
 <h3><a href="index.html">Home</a></h3>
 <hr>
 <h2>Meals</h2>
-    <table border="1">
+<table border="1">
+    <tr>
+        <th>Data</th>
+        <th>Description</th>
+        <th>Calories</th>
+    </tr>
+    <c:forEach var="meal" items="${meals}">
+        <tr class="${meal.excess ? 'excess': 'normal'}">
         <tr>
-            <th>Data</th>
-            <th>Description</th>
-            <th>Calories</th>
+            <td><p>${f:formatLocalDateTime(meal.dateTime, 'yyyy-MM-dd HH:mm')}</p></td>
+            <td><p>${meal.description}</p></td>
+            <td><p>${meal.calories}</p></td>
         </tr>
-<c:forEach var="meal" items="${meals}">
-        <tr><td><p>${f:formatLocalDateTime(meal.dateTime, 'yyyy-MM-dd HH:mm')}</p></td> <td><p>${meal.description}</p></td> <td><p>${meal.calories}</p></td></tr>
-</c:forEach>
-    </table>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

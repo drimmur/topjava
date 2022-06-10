@@ -41,3 +41,6 @@ public class MealTo {
                 '}';
     }
 }
+
+
+//<tr style="background-color:${meal.excess ? 'green' : 'red'}">

@@ -39,7 +39,6 @@ public class MealServlet extends HttpServlet {
 
         log.debug("redirect to meals");
         request.getRequestDispatcher("/meals.jsp").forward(request, response);
-        //response.sendRedirect("meals.jsp");
     }
     private static MealTo createTo(Meal meal, boolean excess) {
         return new MealTo(meal.getDateTime(), meal.getDescription(), meal.getCalories(), excess);
